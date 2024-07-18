@@ -1,0 +1,218 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+@font-face {
+    font-family: moon;
+    src: url(fount/Folker.otf);
+}
+h1{
+    font-family: moon;
+}
+
+/* Add Student Button */
+
+.button-add {
+    position: relative;
+    
+    border-radius: 7px;
+    border: 1px solid rgb(61, 106, 255);
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+    background: transparent;
+    color: #131212;
+    overflow: hidden;
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+}
+
+.button-add:hover {
+      
+    background: rgb(61, 106, 255);
+    box-shadow: 0 0 30px 5px rgba(0, 142, 236, 0.815);
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+  }
+  
+  .button-add:hover::before {
+    -webkit-animation: sh02 0.5s 0s linear;
+    -moz-animation: sh02 0.5s 0s linear;
+    animation: sh02 0.5s 0s linear;
+  }
+  
+  .button-add::before {
+    content: '';
+    display: block;
+    width: 0px;
+    height: 86%;
+    position: absolute;
+    top: 7%;
+    left: 0%;
+    opacity: 0;
+    background: #fff;
+    box-shadow: 0 0 50px 30px #fff;
+    -webkit-transform: skewX(-20deg);
+    -moz-transform: skewX(-20deg);
+    -ms-transform: skewX(-20deg);
+    -o-transform: skewX(-20deg);
+    transform: skewX(-20deg);
+  }
+  
+  @keyframes sh02 {
+    from {
+      opacity: 0;
+      left: 0%;
+    }
+  
+    50% {
+      opacity: 1;
+    }
+  
+    to {
+      opacity: 0;
+      left: 100%;
+    }
+  }
+  
+  .button-add:active {
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: box-shadow 0.2s ease-in;
+    -moz-transition: box-shadow 0.2s ease-in;
+    transition: box-shadow 0.2s ease-in;
+  }
+
+  /*  input */
+
+  .box{
+    position: absolute;
+    top: 0;
+    
+  }
+
+  .form__group {
+    position: relative;
+    padding: 20px 0 0;
+    width: 100%;
+    max-width: 180px;
+  }
+  
+  .form__field {
+    font-family: inherit;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #9b9b9b;
+    outline: 0;
+    font-size: 17px;
+    color: #111010;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+  }
+  
+  .form__field::placeholder {
+    color: transparent;
+  }
+  
+  .form__field:placeholder-shown ~ .form__label {
+    font-size: 17px;
+    cursor: text;
+    top: 20px;
+  }
+  
+  .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 17px;
+    color: #9b9b9b;
+    pointer-events: none;
+  }
+  
+  .form__field:focus {
+    padding-bottom: 6px;
+    font-weight: 700;
+    border-width: 3px;
+    border-image: linear-gradient(to right, #116399, #38caef);
+    border-image-slice: 1;
+  }
+  
+  .form__field:focus ~ .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 17px;
+    color: #38caef;
+    font-weight: 700;
+  }
+  
+  /* reset input */
+  .form__field:required, .form__field:invalid {
+    box-shadow: none;
+  }
+
+  /* add btn */
+  .button {
+    min-width: 120px;
+  
+    position: relative;
+    cursor: pointer;
+  
+    padding: 12px 17px;
+    border: 0;
+    border-radius: 7px;
+  
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+    background: radial-gradient(
+      ellipse at bottom,
+      rgba(71, 81, 92, 1) 0%,
+      rgba(11, 21, 30, 1) 45%
+    );
+  
+    color: rgb(255, 255, 255, 0.66);
+  
+    transition: all 1s cubic-bezier(0.15, 0.83, 0.66, 1);
+  }
+  
+  .button::before {
+    content: "";
+    width: 70%;
+    height: 1px;
+  
+    position: absolute;
+    bottom: 0;
+    left: 15%;
+  
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 1) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    opacity: 0.2;
+  
+    transition: all 1s cubic-bezier(0.15, 0.83, 0.66, 1);
+  }
+  
+  .button:hover {
+    color: rgb(255, 255, 255, 1);
+    transform: scale(1.1) translateY(-3px);
+  }
+  
+  .button:hover::before {
+    opacity: 1;
+  }
+  
+  p{
+    font-weight: 500;
+  }
+
+
+  

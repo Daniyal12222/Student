@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ga+Maamli&display=swap" rel="stylesheet">
+    <title>Student porfoliyo</title>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Main container -->
+    <div class="main w-full  h-[100vh] p-2 flex justify-center items-center">
+        <!-- Mini container -->
+        <div class="container h-full w-full ">
+            <div class="st1 flex justify-evenly w-full h-1/4 flex-col items-center">
+                <h1 class="text-4xl">Student Portal</h1>
+                <!-- Student add button -->
+                <button class="px-[20px] py-[10px] button-add" id="add">Add Student</button>
+            </div>
+            <!-- Student list container -->
+            <div class="st2 w-full h-3/4 bg-blue-200 overflow-y-auto" id="list">
+                <div class="add w-full bg-blue-400 flex mb-1 p-1" >
+                    <!-- Number  -->
+                    <p class="p-2 flex justify-center">No</p>
+                    <!-- Name -->
+                    <p class="p-2 w-1/5 flex justify-center">Name</p>
+                    <!-- Age -->
+                    <p class="p-2 w-1/5 flex justify-center ">age</p>
+                    <!-- uneek number -->
+                    <p class="p-2 w-1/5 flex justify-center">Consumer id</p>
+                    <!-- roll Number -->
+                    <p class="p-2 w-1/5 flex justify-center ">Roll Number</p>
+                    <!-- Delete Button -->
+                    <!-- <div class="c w-1/5 flex justify-end pe-2">
+                        <button id="delet" onclick="dele()" class=" p-2 w-[30%] flex justify-center bg-red-400 rounded-lg ">
+                            <img src="icon/trash-regular-24.png" alt="">
+                        </button>
+                    </div> -->
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    </div>
+    <!-- input box -->
+    <div class="box  hidden w-full h-[100vh]  flex justify-center items-center backdrop-blur-sm" id="st_box">
+        <div class=" field w-1/4 h-[70vh] bg-gray-100 rounded-md p-4 flex  flex-col items-center ">
+            <div class="form__group field mb-5 mt-8">
+                <input type="input" class="form__field" placeholder="Name" id="name" required="">
+                <label for="name" class="form__label">Name</label>
+            </div>
+
+            <div class="form__group field mb-5">
+                <input type="input" class="form__field" placeholder="Name" id="age" required="">
+                <label for="name" class="form__label">Age</label>
+            </div>
+
+            <div class="form__group field mb-8">
+                <input type="input" class="form__field" placeholder="Name" id="course" required="">
+                <label for="name" class="form__label">course</label>
+            </div>
+            <button class="button" id="submint">Add</button>
+
+
+
+
+        </div>
+
+
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
